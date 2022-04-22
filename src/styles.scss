@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,300;1,500&display=swap");
+
+* {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+.mat-typography.mat-app-background {
+    background-image: url("./assets/img/421234-Egor1212.jpg");
+    background-size: cover;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+.pagination li {
+    cursor: pointer;
+}
+
+.active-pagination {
+    background-color: lightgray;
+}
+
+.cursor-disabled {
+    cursor: no-drop;
+    pointer-events: visible;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FE_0122A_progetto_finale": {
+    "crm-finale": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fe-0122-a-progetto-finale",
+            "outputPath": "dist/crm-finale",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,9 +31,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.scss",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.min.css",
+              "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.min.js",
+              "node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FE_0122A_progetto_finale:build:production"
+              "browserTarget": "crm-finale:build:production"
             },
             "development": {
-              "browserTarget": "FE_0122A_progetto_finale:build:development"
+              "browserTarget": "crm-finale:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FE_0122A_progetto_finale:build"
+            "browserTarget": "crm-finale:build"
           }
         },
         "test": {
@@ -99,6 +106,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -107,5 +115,5 @@
       }
     }
   },
-  "defaultProject": "FE_0122A_progetto_finale"
+  "defaultProject": "crm-finale"
 }

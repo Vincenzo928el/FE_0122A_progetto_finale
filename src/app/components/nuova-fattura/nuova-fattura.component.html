@@ -1,0 +1,42 @@
+<div class="m-5 pt-3 p-5"  style="color:aliceblue">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="form" (submit)="cSalva(form)">
+                <div class="mb-3">
+                    <label class="form-label">data*</label>
+                    <input class="form-control" formControlName="data" type="date" id="data" autocomplete="false">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">numero*</label>
+                    <input class="form-control" formControlName="numero" type="number" id="numero" autocomplete="false">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">anno*</label>
+                    <input class="form-control" formControlName="anno" type="number" id="anno" autocomplete="false">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">importo*</label>
+                    <input class="form-control" formControlName="importo" type="number" id="importo" autocomplete="false">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">stato</label>
+                    <select class="form-control" formControlName="stato" id="stato" *ngIf="statoFatture && fattura">
+                        <option value=""></option>
+                        <option *ngFor="let sf of statoFatture" value="{{ sf.id }}"
+                            [attr.selected]="sf.id === fattura.stato.id ? true : null">{{ sf.nome }}</option>
+                    </select>
+                    <select class="form-control" formControlName="stato" id="stato2">
+                        <option value=""></option>
+                        <option *ngFor="let sf of statoFatture" value="{{ sf.id }}">{{ sf.nome }}</option>
+                    </select>
+                </div>
+                <div style="margin-top:20px">
+                    <button type="submit"  class="hvr-ripple-out btn btn-lg btn-outline-light" [disabled]="!form.valid">Salva</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
